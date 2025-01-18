@@ -1,0 +1,240 @@
+body {
+    background-image: linear-gradient(80deg, rgb(168, 197, 208), rgb(255, 255, 255));
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#090909,#000000);
+    padding: 20px 0px;
+    border-radius: 20px;
+    z-index: 1000;
+    transform: translateX(-50%); 
+    width: 300px;
+    margin-bottom: -50px;
+   
+    animation: slidein 6s ease 0s 1 normal forwards;
+}
+  @keyframes slidein {
+      0% {
+          opacity: 0;
+          transform: translateY(-250px);
+      }
+  
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
+}
+  
+.navbar a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    font-weight: bolder;
+    border-radius: 15px;
+    
+}
+.navbar a:hover {
+    color: #ffffff;
+    background-color: #353333;
+    border-radius: 10px;
+}
+
+#up{
+    position: absolute;
+    height: 2200px;
+    width: 2200px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, rgb(165, 63, 234), rgb(205, 30, 249));
+    filter: blur(80px);
+    animation: down 40s infinite;
+  }
+  #down{
+      position: absolute;
+      right: 0;
+      height: 2000px;
+      width: 2000px;
+      border-radius: 50%;
+      background-image: linear-gradient(80deg, rgba(55, 175, 255, 0.8), rgba(42, 53, 255, 0.8));
+      filter: blur(80px);
+      animation: up 30s infinite;
+  }
+  
+  #left{
+    position: absolute;
+    height: 2000px;
+    width: 2000px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, rgba(207, 15, 255, 0.8), rgba(255, 100, 247, 0.8));
+    filter: blur(80px);
+    animation: left 30s infinite;
+  }
+  #right{
+    position: absolute;
+    height: 2000px;
+    width: 2000px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, rgba(255, 142, 49, 0.8), rgba(95, 194, 255, 0.8));
+    filter: blur(80px);
+    animation: right 40s infinite;
+  }
+  @keyframes down{
+      0%, 100%{
+          top: -100px;
+      }
+      70%{
+          top: 700px;
+      }
+  }
+  
+  @keyframes up{
+    0%, 100%{
+        bottom: -100px;
+    }
+    70%{
+        bottom: 700px;
+    }
+  }
+  @keyframes left{
+    0%, 100%{
+        left: -100px;
+    }
+    70%{
+        left: 700px;
+    }
+  }
+  @keyframes right{
+    0%, 100%{
+        left: -100px;
+    }
+    70%{
+        left: 1300px;
+    }
+  }
+  
+.cardp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 15px;
+    
+}
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.13);
+    border-radius: 50px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    width: 1500px;
+    height: 800px;
+    padding: 20px; 
+    gap: 10px; 
+  
+}
+
+.imgmax{
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    background: linear-gradient(#f476ff,#73a2ff,#5ed4ff);
+    border-radius: 40px;
+    margin: 10px;
+    transition: 0.3s ease;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    animation: Wobble 2s ease 3s 1 normal forwards, fadein 3s ease 0s 1 normal forwards;
+}
+@keyframes Wobble {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
+.imgmax:hover{
+    scale: 1.1;
+    cursor: pointer;
+    background: linear-gradient(#4392ff,#73a2ff,#d849ff);
+    color: aliceblue;
+}
+.hi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 20px;
+    width: 300px;
+    height: 140px;
+    margin: 10px;
+    border-radius: 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    font-weight: 600;
+    font-size: 30px;
+    transition: 0.3s ease;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    animation: fadein 3s ease 0s 1 normal forwards, Scale 2s ease 0s 1 normal forwards;
+}
+.hi:hover{
+    scale: 1.1;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background: linear-gradient(#f476ff,#73a2ff,#5ed4ff);
+    color: aliceblue;
+}
+#gradient{
+    background: linear-gradient(#e89cf020,#ffffff75);
+    color: aliceblue;
+
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes Scale {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}

@@ -1,0 +1,308 @@
+
+body {
+    background-image: linear-gradient(80deg, rgb(168, 197, 208), rgb(255, 255, 255));
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#ffffff,#e5dbd5);
+  mix-blend-mode: screen;
+  padding: 20px 0px;
+  border-radius: 20px;
+  z-index: 1000;
+  position: absolute; 
+  top: 10px;
+  transform: translateX(-50%); 
+  width: 300px;
+  -webkit-box-shadow:0px 0px 126px 46px rgba(255, 255, 255, 0.78);
+  -moz-box-shadow: 0px 0px 126px 46px rgba(255, 255, 255, 0.51);
+  box-shadow: 0px 0px 126px 46px rgba(255, 255, 255, 0.51);
+  animation: slidein 2s ease 0s 1 normal forwards;
+}
+@keyframes slidein {
+	0% {
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.navbar a {
+  color: rgb(56, 56, 56);
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  font-weight: bolder;
+  border-radius: 15px;
+  
+}
+.navbar a:hover {
+  color: #ffffff;
+  background-color: #353333;
+  border-radius: 10px;
+}
+#up{
+  position: absolute;
+  height: 2200px;
+  width: 2200px;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, rgb(165, 63, 234), rgb(205, 30, 249));
+  filter: blur(80px);
+  animation: down 40s infinite;
+}
+#down{
+    position: absolute;
+    right: 0;
+    height: 2000px;
+    width: 2000px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, rgba(55, 175, 255, 0.8), rgba(42, 53, 255, 0.8));
+    filter: blur(80px);
+    animation: up 30s infinite;
+}
+
+#left{
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, rgba(207, 15, 255, 0.8), rgba(255, 100, 247, 0.8));
+  filter: blur(80px);
+  animation: left 30s infinite;
+}
+#right{
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  border-radius: 50%;
+  background-image: linear-gradient(80deg, rgba(255, 142, 49, 0.8), rgba(95, 194, 255, 0.8));
+  filter: blur(80px);
+  animation: right 40s infinite;
+}
+@keyframes down{
+    0%, 100%{
+        top: -100px;
+    }
+    70%{
+        top: 700px;
+    }
+}
+
+@keyframes up{
+  0%, 100%{
+      bottom: -100px;
+  }
+  70%{
+      bottom: 700px;
+  }
+}
+@keyframes left{
+  0%, 100%{
+      left: -100px;
+  }
+  70%{
+      left: 700px;
+  }
+}
+@keyframes right{
+  0%, 100%{
+      left: -100px;
+  }
+  70%{
+      left: 1300px;
+  }
+}
+
+.Name {
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    font-weight: bold;
+    color: #ffffff;
+    justify-content: center;
+    justify-items: center;
+    position: absolute;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 90vh;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in forwards;
+    margin-top: 10px;
+
+}
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+h1, p {
+    margin: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    
+}
+
+h1 {
+  font-weight: lighter;
+  color: #ffffffb0;
+  margin-bottom: 30px;
+  
+}
+
+p {
+    justify-content: center;
+    color: #ffffff;
+}
+
+.btn {
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  -webkit-box-shadow:0px 0px 126px 46px rgba(255, 255, 255, 0.78);
+  -moz-box-shadow: 0px 0px 126px 46px rgba(255, 255, 255, 0.51);
+  box-shadow: 0px 0px 126px 46px rgba(255, 255, 255, 0.51);
+}
+
+.img {
+  width: 100px;
+}
+
+#video{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.custom-button {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  color: rgb(64, 64, 64); 
+  margin-top: -20px;
+  border: none; 
+  border-radius: 12px; 
+  font-size: 16px; 
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: 10px;
+  font-weight: 550;
+  animation: wiggle 2s ease-in 3s infinite normal forwards;
+  
+
+}
+@keyframes wiggle {
+	0%,
+	100% {
+		transform: rotate(0deg);
+		transform-origin: 50% 100%;
+	}
+
+	10% {
+		transform: rotate(2deg);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: rotate(-4deg);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: rotate(4deg);
+	}
+
+	80% {
+		transform: rotate(-2deg);
+	}
+
+	90% {
+		transform: rotate(2deg);
+	}
+}
+
+.custom-button:hover {
+  background-color: #ffffff00; 
+  transform: scale(1.05); 
+  color: #020024;
+  animation:none;
+  transform: rotate(90deg);
+  
+}
+.custom-button:active {
+  background-color: #bfd7e1; 
+  transform: scale(0.95); 
+  
+}
+
+
+.typing-demo {
+    display: flex;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    font-size: 200px;
+    margin: -40px;
+    background: -webkit-linear-gradient(#ffffff, #e9e9e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
+.glowing-circle {
+  width: 1000px;
+  position: absolute;
+  height: 1000px;
+  filter: blur(60px);
+  left: 0px;
+  top: 50px;
+  border-radius:50%;
+
+  background-color: #ffffff46;
+  -webkit-animation: glowing 1s ease-in-out infinite alternate;
+  -moz-animation: glowing 1s ease-in-out infinite alternate;
+  animation: glowing 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glowing {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #d027ff, 0 0 30px #f0f, 0 0 40px #0ff, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
